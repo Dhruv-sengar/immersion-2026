@@ -346,3 +346,227 @@ java Test.java
 
 **Interview Answer:**
 > JVM runs the class name because it executes bytecode stored in the `.class` file, not the source `.java` file.
+
+# 21. Why is main() method important?
+
+The `main()` method is the starting point of a Java program.
+
+### Interview Answer
+
+> JVM starts program execution from the main() method.
+
+---
+
+# 22. Why is main() called entry point of Java?
+
+Because execution begins from `main()`.
+
+### Interview Answer
+
+> main() is called the entry point because JVM enters the program through it.
+
+---
+
+# 23. Why is main method public?
+
+JVM must access it from outside the class.
+
+### Interview Answer
+
+> main() is public so JVM can call it.
+
+---
+
+# 24. Why is main method static?
+
+JVM calls it without creating an object.
+
+### Interview Answer
+
+> main() is static because JVM invokes it before object creation.
+
+---
+
+# 25. Why is main method void?
+
+It does not return any value.
+
+### Interview Answer
+
+> main() is void because it returns nothing.
+
+---
+
+# 26. Why does main method accept String[] args?
+
+Used to receive command-line arguments.
+
+### Interview Answer
+
+> String[] args is used to accept command-line inputs.
+
+---
+
+# 27. Can we overload main method?
+
+Yes.
+
+```java
+public static void main(int a)
+{
+}
+```
+
+### Interview Answer
+
+> Yes, main() can be overloaded, but JVM calls only the standard main method.
+
+---
+
+# 28. Can we override main method?
+
+No.
+
+Because static methods cannot be overridden.
+
+### Interview Answer
+
+> No, main() cannot be overridden because it is static.
+
+---
+
+# 29. Can we make main method private?
+
+Yes, but JVM cannot access it.
+
+### Interview Answer
+
+> Private main() cannot be executed by JVM.
+
+---
+
+# 30. What happens if main method is not static?
+
+JVM cannot call it directly.
+
+### Interview Answer
+
+> Program will not run because JVM requires a static main method.
+
+---
+
+# 31. Can Java program execute without main method?
+
+Yes, in Applets, Servlets, Spring Boot, etc.
+
+### Interview Answer
+
+> Normal Java applications require main(), but some frameworks do not.
+
+---
+
+# 32. Can we write main method without String array?
+
+No.
+
+Standard signature:
+
+```java
+public static void main(String[] args)
+```
+
+### Interview Answer
+
+> JVM recognizes only the standard main method signature.
+
+---
+
+# 33. What is static keyword?
+
+Static belongs to the class rather than objects.
+
+### Interview Answer
+
+> Static members are shared by all objects of a class.
+
+---
+
+# 34. Difference between static and non-static members?
+
+| Static | Non-Static |
+|----------|------------|
+| Belongs to class | Belongs to object |
+| No object needed | Object required |
+| Shared | Separate copy |
+
+### Interview Answer
+
+> Static members belong to the class, while non-static members belong to objects.
+
+---
+
+# 35. Why static methods can be called without object?
+
+Because they belong to the class.
+
+### Interview Answer
+
+> Static methods are class-level methods, so objects are not required.
+
+---
+
+# 36. Why can we access static variables using class name?
+
+Because they belong to the class itself.
+
+Example:
+
+```java
+Student.count
+```
+
+### Interview Answer
+
+> Static variables belong to the class and can be accessed using the class name.
+
+---
+
+# 37. Why main method must be static?
+
+JVM must call it before creating any object.
+
+### Interview Answer
+
+> main() is static so JVM can execute it directly.
+
+---
+
+# 38. Can static method access non-static variables directly?
+
+No.
+
+### Interview Answer
+
+> Static methods cannot directly access non-static members because non-static members belong to objects.
+
+---
+
+# 39. Can constructor be static?
+
+No.
+
+### Interview Answer
+
+> Constructors are used for object creation, so they cannot be static.
+
+---
+
+# 40. Can static methods be overridden?
+
+No.
+
+They can only be hidden.
+
+### Interview Answer
+
+> Static methods cannot be overridden because they belong to the class, not the object.
