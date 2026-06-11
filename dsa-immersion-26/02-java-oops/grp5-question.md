@@ -183,3 +183,58 @@ Hello
 ### Interview Answer
 
 > `System.out.print()` is a method used to display output on the console without moving the cursor to the next line.
+
+# What is the use of printf() in Java?
+
+`printf()` is used to print data in a specific format. It helps us display variables and text in a neat and organized way.
+
+### Why do we use printf()?
+
+Suppose we want to print a student's name and age:
+
+```java
+String name = "Dhruv";
+int age = 19;
+
+System.out.printf("Name: %s Age: %d", name, age);
+```
+
+### Output
+
+```text
+Name: Dhruv Age: 19
+```
+
+Instead of joining strings using `+`, `printf()` allows us to insert values directly into the text.
+
+### Common Symbols
+
+- `%s` → String
+- `%d` → Integer
+- `%f` → Decimal Number
+- `%c` → Character
+
+### Example
+
+```java
+System.out.printf("My name is %s and I am %d years old", "Dhruv", 19);
+```
+
+### Output
+
+```text
+My name is Dhruv and I am 19 years old
+```
+
+### Real-Life Use Case
+
+`printf()` is useful when printing:
+- Student records
+- Employee details
+- Marksheets
+- Bills and reports
+- Formatted tables
+
+### Interview Answer
+
+> `printf()` is used to print formatted output. It allows us to insert values such as strings, numbers, and characters into a predefined message using format specifiers like `%s` and `%d`.
