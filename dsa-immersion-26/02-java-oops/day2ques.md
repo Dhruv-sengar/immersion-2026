@@ -172,3 +172,177 @@ JVM
 
 **Interview Answer:**
 > Java is called both compiled and interpreted because source code is first compiled into bytecode and then interpreted/executed by the JVM.
+
+# 11. Why is class mandatory in Java?
+
+Java is an object-oriented language, and everything is organized inside classes.
+
+**Interview Answer:**
+> Class is mandatory because Java executes code through classes and objects.
+
+---
+
+# 12. Why is Java called a class-based language?
+
+Java programs are built using classes, and all code is written inside classes.
+
+**Interview Answer:**
+> Java is called class-based because every program is organized around classes.
+
+---
+
+# 13. Why must file name match public class name?
+
+The Java compiler uses the public class name to identify the file.
+
+Example:
+
+```java
+public class Test {
+}
+```
+
+File name:
+
+```text
+Test.java
+```
+
+**Interview Answer:**
+> The file name must match the public class name so the compiler can locate and compile it correctly.
+
+---
+
+# 14. What happens if public class name and file name differ?
+
+Example:
+
+```java
+public class Test {
+}
+```
+
+File name:
+
+```text
+Hello.java
+```
+
+Compilation Error:
+
+```text
+class Test is public, should be declared in a file named Test.java
+```
+
+**Interview Answer:**
+> Java gives a compilation error if the public class name and file name are different.
+
+---
+
+# 15. If class is not public, can file name be anything?
+
+Yes.
+
+Example:
+
+```java
+class Test {
+}
+```
+
+File names can be:
+
+```text
+Hello.java
+Test.java
+Demo.java
+```
+
+**Interview Answer:**
+> If a class is not public, the file name can be anything.
+
+---
+
+# 16. Can multiple classes exist in a single Java file?
+
+Yes.
+
+Example:
+
+```java
+class A {
+}
+
+class B {
+}
+```
+
+**Interview Answer:**
+> Yes, multiple classes can exist in one Java file.
+
+---
+
+# 17. Can multiple public classes exist in one Java file?
+
+No.
+
+Example:
+
+```java
+public class A {
+}
+
+public class B {
+}
+```
+
+This causes a compilation error.
+
+**Interview Answer:**
+> No, only one public class is allowed per Java file.
+
+---
+
+# 18. Why only one public class allowed per file?
+
+To avoid confusion and help the compiler identify the correct file and class.
+
+**Interview Answer:**
+> Only one public class is allowed so the compiler can easily map the class name to the file name.
+
+---
+
+# 19. Difference between class name and file name?
+
+### Class Name
+- Name of the class inside the code.
+- Example: `Student`
+
+### File Name
+- Name of the Java file.
+- Example: `Student.java`
+
+**Interview Answer:**
+> Class name identifies the class, while file name identifies the source file containing the class.
+
+---
+
+# 20. Why JVM runs class name instead of file name?
+
+After compilation, JVM executes the `.class` file generated from the class.
+
+Example:
+
+```bash
+javac Test.java
+java Test
+```
+
+Not:
+
+```bash
+java Test.java
+```
+
+**Interview Answer:**
+> JVM runs the class name because it executes bytecode stored in the `.class` file, not the source `.java` file.
