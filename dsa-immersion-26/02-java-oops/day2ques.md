@@ -570,3 +570,992 @@ They can only be hidden.
 ### Interview Answer
 
 > Static methods cannot be overridden because they belong to the class, not the object.
+
+# 41. Difference between static binding and dynamic binding?
+
+### Static Binding
+- Happens at compile time.
+- Used for static, private, and final methods.
+
+### Dynamic Binding
+- Happens at runtime.
+- Used for overridden methods.
+
+### Interview Answer
+
+> Static binding occurs at compile time, while dynamic binding occurs at runtime.
+
+---
+
+# 42. What happens internally when an object is created?
+
+When we create an object:
+
+```java
+Student s = new Student();
+```
+
+1. Memory is allocated in Heap.
+2. Constructor is called.
+3. Object is initialized.
+4. Reference variable stores object's address.
+
+### Interview Answer
+
+> Heap memory is allocated, constructor executes, and reference stores the object's address.
+
+---
+
+# 43. Explain:
+
+```java
+Student s = new Student();
+```
+
+- `Student` → Class
+- `s` → Reference Variable
+- `new Student()` → Object Creation
+- `=` → Assigns reference
+
+### Interview Answer
+
+> `s` stores the reference of the object created using `new Student()`.
+
+---
+
+# 44. Difference between reference variable and object?
+
+### Reference Variable
+- Stores address/reference.
+- Example: `s`
+
+### Object
+- Stores actual data.
+- Example: `new Student()`
+
+### Interview Answer
+
+> Reference variable stores the address, while object stores actual data and methods.
+
+---
+
+# 45. Where are objects stored in memory?
+
+Objects are stored in:
+
+```text
+Heap Memory
+```
+
+### Interview Answer
+
+> All objects are stored in Heap Memory.
+
+---
+
+# 46. Difference between Stack Memory and Heap Memory?
+
+| Stack | Heap |
+|---------|---------|
+| Stores local variables | Stores objects |
+| Faster | Slower |
+| Automatically managed | Managed by GC |
+
+### Interview Answer
+
+> Stack stores local variables, while Heap stores objects.
+
+---
+
+# 47. What stores local variables?
+
+```java
+int x = 10;
+```
+
+Stored in:
+
+```text
+Stack Memory
+```
+
+### Interview Answer
+
+> Local variables are stored in Stack Memory.
+
+---
+
+# 48. What stores objects?
+
+```java
+Student s = new Student();
+```
+
+Stored in:
+
+```text
+Heap Memory
+```
+
+### Interview Answer
+
+> Objects are stored in Heap Memory.
+
+---
+
+# 49. Why is Stack Memory faster than Heap Memory?
+
+- Follows LIFO.
+- Simple memory management.
+- No garbage collection needed.
+
+### Interview Answer
+
+> Stack is faster because memory allocation and deallocation are simple.
+
+---
+
+# 50. What is garbage collection?
+
+Garbage Collection automatically removes unused objects.
+
+Example:
+
+```java
+Student s = new Student();
+s = null;
+```
+
+### Interview Answer
+
+> Garbage Collection automatically frees memory by removing unused objects.
+
+---
+
+# 51. Explain System.out.println()
+
+`System.out.println()` prints output and moves the cursor to the next line.
+
+### Interview Answer
+
+> println() prints output and then moves to the next line.
+
+---
+
+# 52. What is System in Java?
+
+`System` is a predefined Java class.
+
+### Interview Answer
+
+> System is a built-in class that provides access to system resources.
+
+---
+
+# 53. What is out in Java?
+
+`out` is a static object of the `PrintStream` class.
+
+### Interview Answer
+
+> out is a static output stream object used for displaying output.
+
+---
+
+# 54. What is print()?
+
+Used to display output without moving to a new line.
+
+### Interview Answer
+
+> print() displays output on the same line.
+
+---
+
+# 55. Why can we call println() without creating an object?
+
+Because `out` is a static object.
+
+### Interview Answer
+
+> println() is called through the static object `System.out`.
+
+---
+
+# 56. Why is out static?
+
+Because it belongs to the `System` class.
+
+### Interview Answer
+
+> out is static so it can be accessed without creating a System object.
+
+---
+
+# 57. Which class contains println() method?
+
+```text
+PrintStream Class
+```
+
+### Interview Answer
+
+> println() is a method of the PrintStream class.
+
+---
+
+# 58. Difference between print() and println()?
+
+| print() | println() |
+|----------|------------|
+| Same line | Next line |
+| No line break | Adds line break |
+
+### Interview Answer
+
+> print() stays on the same line, while println() moves to the next line.
+
+---
+
+# 59. What is PrintStream class?
+
+A class used to print data to the console.
+
+### Interview Answer
+
+> PrintStream provides methods like print() and println() for output.
+
+---
+
+# 60. What are the four pillars of OOP?
+
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+### Interview Answer
+
+> The four pillars are Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+---
+
+# 61. Explain encapsulation with real-world example.
+
+Encapsulation means wrapping data and methods together.
+
+Example:
+
+```java
+class Student {
+    private int age;
+
+    public void setAge(int age){
+        this.age = age;
+    }
+}
+```
+
+### Real-world Example
+
+ATM Machine.
+
+Users access functions but cannot directly access internal data.
+
+### Interview Answer
+
+> Encapsulation binds data and methods together and hides data using private access.
+
+---
+
+# 62. Explain inheritance with example.
+
+Inheritance allows one class to acquire properties of another.
+
+```java
+class Animal {
+}
+
+class Dog extends Animal {
+}
+```
+
+### Interview Answer
+
+> Inheritance allows code reuse by inheriting properties from a parent class.
+
+---
+
+# 63. Explain polymorphism with example.
+
+One action, many forms.
+
+```java
+void add(int a,int b){}
+void add(double a,double b){}
+```
+
+### Interview Answer
+
+> Polymorphism allows methods to behave differently based on input.
+
+---
+
+# 64. Explain abstraction with example.
+
+Hiding implementation details and showing only functionality.
+
+Example:
+
+```java
+abstract class Vehicle{
+    abstract void start();
+}
+```
+
+### Interview Answer
+
+> Abstraction hides internal details and shows only essential features.
+
+---
+
+# 65. Difference between abstraction and encapsulation?
+
+| Abstraction | Encapsulation |
+|------------|------------|
+| Hides implementation | Hides data |
+| Focuses on what | Focuses on how |
+
+### Interview Answer
+
+> Abstraction hides implementation, while encapsulation hides data.
+
+---
+
+# 66. Difference between overloading and overriding?
+
+| Overloading | Overriding |
+|------------|------------|
+| Same class | Parent-child class |
+| Compile-time | Runtime |
+| Different parameters | Same parameters |
+
+### Interview Answer
+
+> Overloading changes parameters, while overriding changes implementation.
+
+---
+
+# 67. What is runtime polymorphism?
+
+Polymorphism achieved through method overriding.
+
+### Interview Answer
+
+> Runtime polymorphism occurs when overridden methods are resolved at runtime.
+
+---
+
+# 68. What is compile-time polymorphism?
+
+Polymorphism achieved through method overloading.
+
+### Interview Answer
+
+> Compile-time polymorphism occurs through method overloading.
+
+---
+
+# 69. Why multiple inheritance not supported in Java?
+
+To avoid ambiguity problems.
+
+### Interview Answer
+
+> Java avoids multiple inheritance of classes to prevent ambiguity.
+
+---
+
+# 70. What is IS-A relationship?
+
+Inheritance relationship.
+
+Example:
+
+```text
+Dog IS-A Animal
+```
+
+### Interview Answer
+
+> IS-A represents inheritance.
+
+---
+
+# 71. What is HAS-A relationship?
+
+Composition relationship.
+
+Example:
+
+```text
+Car HAS-A Engine
+```
+
+### Interview Answer
+
+> HAS-A represents composition or aggregation.
+
+---
+
+# 72. Why Java is not purely object-oriented?
+
+Because Java supports primitive data types.
+
+Example:
+
+```java
+int x = 10;
+```
+
+### Interview Answer
+
+> Java is not purely object-oriented because it uses primitive data types.
+
+# 73. What is a constructor?
+
+A constructor is a special method used to initialize objects.
+
+```java
+class Student {
+    Student() {
+        System.out.println("Constructor Called");
+    }
+}
+```
+
+### Interview Answer
+
+> A constructor is automatically called when an object is created.
+
+---
+
+# 74. Why is constructor called automatically?
+
+Because Java uses constructors to initialize objects.
+
+### Interview Answer
+
+> Constructors are automatically invoked during object creation.
+
+---
+
+# 75. Can constructor return a value?
+
+No.
+
+### Interview Answer
+
+> Constructors cannot have a return type.
+
+---
+
+# 76. Can constructor be private?
+
+Yes.
+
+### Interview Answer
+
+> Private constructors restrict object creation from outside the class.
+
+---
+
+# 77. Difference between constructor and method?
+
+| Constructor | Method |
+|------------|---------|
+| Initializes object | Performs task |
+| Same as class name | Any valid name |
+| No return type | Has return type |
+
+### Interview Answer
+
+> Constructor initializes objects, while methods perform operations.
+
+---
+
+# 78. What is default constructor?
+
+A constructor automatically provided by Java if none is written.
+
+### Interview Answer
+
+> A default constructor is created by the compiler when no constructor exists.
+
+---
+
+# 79. What is parameterized constructor?
+
+A constructor that accepts arguments.
+
+```java
+Student(String name){
+}
+```
+
+### Interview Answer
+
+> A parameterized constructor initializes objects using user-provided values.
+
+---
+
+# 80. Can constructors be overloaded?
+
+Yes.
+
+### Interview Answer
+
+> Constructors can be overloaded by changing parameter lists.
+
+---
+
+# 81. What is this keyword?
+
+`this` refers to the current object.
+
+### Interview Answer
+
+> this refers to the current object of the class.
+
+---
+
+# 82. Why use this keyword?
+
+To differentiate instance variables from local variables.
+
+```java
+this.age = age;
+```
+
+### Interview Answer
+
+> this is used to refer to current object variables.
+
+---
+
+# 83. What is String in Java?
+
+String is a sequence of characters.
+
+```java
+String name = "Dhruv";
+```
+
+### Interview Answer
+
+> String is a class used to store text data.
+
+---
+
+# 84. Why is String immutable?
+
+Its value cannot be changed after creation.
+
+### Interview Answer
+
+> String is immutable for security and performance reasons.
+
+---
+
+# 85. Difference between String and StringBuilder?
+
+| String | StringBuilder |
+|----------|--------------|
+| Immutable | Mutable |
+| Slower | Faster |
+
+### Interview Answer
+
+> String cannot be modified, while StringBuilder can.
+
+---
+
+# 86. Difference between == and equals()?
+
+### ==
+
+Compares references.
+
+### equals()
+
+Compares values.
+
+### Interview Answer
+
+> == compares addresses, while equals() compares content.
+
+---
+
+# 87. What is String Pool?
+
+A special memory area for storing string literals.
+
+### Interview Answer
+
+> String Pool saves memory by reusing existing string objects.
+
+---
+
+# 88. What is package in Java?
+
+A package is a collection of related classes.
+
+### Interview Answer
+
+> Packages help organize Java classes.
+
+---
+
+# 89. Why use packages?
+
+- Organization
+- Avoid naming conflicts
+- Better maintenance
+
+### Interview Answer
+
+> Packages group related classes together.
+
+---
+
+# 90. Difference between import and package?
+
+| package | import |
+|---------|---------|
+| Creates package | Uses package |
+
+### Interview Answer
+
+> package defines a package, while import accesses package classes.
+
+---
+
+# 91. What is access modifier?
+
+Defines accessibility of classes, methods, and variables.
+
+### Interview Answer
+
+> Access modifiers control visibility.
+
+---
+
+# 92. Types of access modifiers?
+
+1. public
+2. private
+3. protected
+4. default
+
+### Interview Answer
+
+> Java provides four access modifiers.
+
+---
+
+# 93. What is public?
+
+Accessible from anywhere.
+
+### Interview Answer
+
+> Public members can be accessed from any class.
+
+---
+
+# 94. What is private?
+
+Accessible only within the same class.
+
+### Interview Answer
+
+> Private members are hidden from other classes.
+
+---
+
+# 95. What is protected?
+
+Accessible within package and subclasses.
+
+### Interview Answer
+
+> Protected allows access within package and inheritance.
+
+---
+
+# 96. What is default access modifier?
+
+No modifier specified.
+
+### Interview Answer
+
+> Default members are accessible only within the same package.
+
+---
+
+# 97. Difference between abstract class and interface?
+
+| Abstract Class | Interface |
+|---------------|------------|
+| Partial abstraction | Full abstraction |
+| Can have constructors | No constructors |
+
+### Interview Answer
+
+> Abstract class provides partial abstraction, while interface provides complete abstraction.
+
+---
+
+# 98. Why use interface?
+
+To achieve abstraction and multiple inheritance.
+
+### Interview Answer
+
+> Interfaces define contracts that classes must implement.
+
+---
+
+# 99. Can we create object of abstract class?
+
+No.
+
+### Interview Answer
+
+> Abstract classes cannot be instantiated.
+
+---
+
+# 100. Can we create object of interface?
+
+No.
+
+### Interview Answer
+
+> Interfaces cannot be instantiated directly.
+
+---
+
+# 101. What is exception?
+
+An unwanted event occurring during program execution.
+
+### Interview Answer
+
+> An exception is a runtime error that disrupts normal program flow.
+
+---
+
+# 102. Difference between error and exception?
+
+| Error | Exception |
+|---------|-----------|
+| Serious problem | Recoverable problem |
+
+### Interview Answer
+
+> Errors are serious issues, while exceptions can be handled.
+
+---
+
+# 103. What is exception handling?
+
+Handling runtime errors using try-catch.
+
+### Interview Answer
+
+> Exception handling prevents program termination due to errors.
+
+---
+
+# 104. What is try block?
+
+Contains risky code.
+
+### Interview Answer
+
+> try contains code that may generate exceptions.
+
+---
+
+# 105. What is catch block?
+
+Handles exceptions.
+
+### Interview Answer
+
+> catch handles exceptions thrown by try.
+
+---
+
+# 106. What is finally block?
+
+Always executes.
+
+### Interview Answer
+
+> finally executes whether exception occurs or not.
+
+---
+
+# 107. What is throw keyword?
+
+Used to explicitly throw exceptions.
+
+### Interview Answer
+
+> throw is used to generate an exception manually.
+
+---
+
+# 108. What is throws keyword?
+
+Declares possible exceptions.
+
+### Interview Answer
+
+> throws informs the compiler about exceptions.
+
+---
+
+# 109. Difference between throw and throws?
+
+| throw | throws |
+|--------|---------|
+| Used inside method | Used in method declaration |
+
+### Interview Answer
+
+> throw creates an exception, while throws declares it.
+
+---
+
+# 110. What is multithreading?
+
+Executing multiple tasks simultaneously.
+
+### Interview Answer
+
+> Multithreading allows concurrent execution of multiple threads.
+
+---
+
+# 111. What is thread?
+
+A lightweight process.
+
+### Interview Answer
+
+> A thread is the smallest unit of execution.
+
+---
+
+# 112. Why use multithreading?
+
+Improves performance and responsiveness.
+
+### Interview Answer
+
+> Multithreading improves resource utilization and speed.
+
+---
+
+# 113. Difference between process and thread?
+
+| Process | Thread |
+|----------|---------|
+| Heavyweight | Lightweight |
+
+### Interview Answer
+
+> A process is independent, while threads share resources.
+
+---
+
+# 114. What is JVM?
+
+Java Virtual Machine.
+
+### Interview Answer
+
+> JVM executes Java bytecode.
+
+---
+
+# 115. What is JIT Compiler?
+
+Converts bytecode into machine code.
+
+### Interview Answer
+
+> JIT improves execution speed by compiling bytecode at runtime.
+
+---
+
+# 116. What is Java API?
+
+Predefined classes and libraries.
+
+### Interview Answer
+
+> Java API provides reusable classes and methods.
+
+---
+
+# 117. Why is Java secure?
+
+- No pointers
+- Bytecode verification
+- JVM security
+
+### Interview Answer
+
+> Java provides security through JVM and bytecode verification.
+
+---
+
+# 118. Why is Java robust?
+
+- Exception handling
+- Garbage collection
+- Strong memory management
+
+### Interview Answer
+
+> Java is robust because it handles errors and memory efficiently.
+
+---
+
+# 119. Why is Java popular?
+
+- Platform independent
+- Secure
+- Object-oriented
+- Huge community
+
+### Interview Answer
+
+> Java is popular because it is portable, secure, and widely used.
+
+---
+
+# 120. Why should we learn Java?
+
+- Industry demand
+- OOP concepts
+- Enterprise applications
+- Strong career opportunities
+
+### Interview Answer
+
+> Java is widely used in industry and forms the foundation of many software applications.
