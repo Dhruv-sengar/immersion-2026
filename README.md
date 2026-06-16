@@ -1,213 +1,89 @@
+<div align="center">
+
 # 🚀 Immersion 2026
 
-A structured repository for my 2026 placement preparation journey, covering:
+### A public log of my learning, preparation, and growth as a developer.
 
-- 📚 Data Structures & Algorithms (DSA)
-- 🗄️ Database Management Systems (DBMS)
-- 💻 Object-Oriented Programming (OOP)
-- 🌐 Web Development
-- ☕ Java Programming
-- 🧠 Interview Preparation
-- 📖 Placement Notes & Resources
+</div>
 
 ---
 
-## 👨‍💻 About Me
+## 📖 About
 
-Hi, I'm **Dhruv Sengar**.
+This repository contains my notes, practice material, and concepts that I learn during my preparation journey.
 
-🎓 Computer Science Student  
-💻 Python & Java Developer  
-🚀 Preparing for Product-Based Companies  
-📍 Mathura, India
+Instead of collecting resources, I focus on understanding concepts and documenting them in a way that helps me revise quickly and track my progress over time.
 
-GitHub: [Dhruv-sengar](https://github.com/Dhruv-sengar)
+As I learn new topics, new folders and notes will naturally be added here.
 
 ---
 
-# 📂 Repository Structure
+## 📂 Current Structure
 
 ```text
 immersion-2026/
 │
 ├── dbms/
-│   ├── week1.md
-│   ├── normalization.md
-│   ├── sql-notes.md
-│   └── interview-questions.md
+│   └── week1
 │
-├── dsa-immersion-26/
-│   ├── arrays/
-│   ├── strings/
-│   ├── linked-list/
-│   ├── stack/
-│   ├── queue/
-│   ├── trees/
-│   └── graphs/
-│
-├── java/
-│   ├── oops/
-│   ├── collections/
-│   ├── exception-handling/
-│   └── projects/
-│
-├── web-development/
-│
-├── projects/
-│
-└── README.md
+└── dsa-immersion-26/
 ```
 
 ---
 
-# 🎯 Goals
+## 📚 Current Topics
 
-- Master Data Structures & Algorithms
-- Build Strong DBMS Fundamentals
-- Learn Core Java & OOP Concepts
-- Solve Coding Interview Questions
-- Build Real-World Projects
-- Prepare for Technical Interviews
-- Crack Product-Based Company Placements
+### 🗄️ DBMS
 
----
+Currently learning and documenting:
 
-# 📚 Topics Covered
-
-## DSA
-
-- Arrays
-- Strings
-- Linked Lists
-- Stack
-- Queue
-- Trees
-- Graphs
-- Dynamic Programming
-- Greedy Algorithms
-- Recursion
-- Backtracking
-
----
-
-## DBMS
-
-- ER Model
+- Entities
 - Keys
-- Normalization
-- SQL Queries
-- Transactions
-- Indexing
-- Joins
+- Relationships
 - Cardinality
-- Constraints
+- ER Models
+- Interview Questions
 
----
+### 💻 DSA
 
-## Java
-
-- OOP Concepts
-- Collections Framework
-- Exception Handling
-- File Handling
-- Multithreading
-- JDBC
-
----
-
-## Interview Preparation
-
-- Technical Interview Questions
-- HR Interview Questions
-- System Design Basics
-- Project Viva Questions
-
----
-
-# 🛠️ Projects
-
-Some projects developed during preparation:
-
-### 🍔 Online Food Delivery System
-Java-based food ordering and management application.
-
-### 🤖 AI Desktop Assistant
-Voice-enabled desktop assistant with productivity features.
-
-### ⚖️ Lawyer AI
-AI-powered legal assistance system for common legal guidance.
-
----
-
-# 📈 Progress Tracker
-
-| Topic | Status |
-|---------|---------|
-| DSA | 🔄 In Progress |
-| DBMS | 🔄 In Progress |
-| Java | 🔄 In Progress |
-| OOP | ✅ Completed |
-| Projects | 🔄 Ongoing |
-| Interview Prep | 🔄 Ongoing |
-
----
-
-# 📌 Placement Roadmap
-
-### Phase 1
-- Java Fundamentals
-- OOP
-- DBMS
-
-### Phase 2
-- DSA Basics
 - Problem Solving
-
-### Phase 3
-- Advanced DSA
-- Projects
-
-### Phase 4
-- Mock Interviews
-- Resume Building
-
-### Phase 5
-- Placement Applications
+- Coding Practice
+- Concept Building
 
 ---
 
-# 🌟 Learning Philosophy
+## 🎯 Purpose
 
-> Consistency beats intensity.
-
-Small daily improvements lead to long-term success.
-
----
-
-# 🤝 Contributions
-
-This repository is primarily for personal learning and placement preparation.
-
-Suggestions and improvements are always welcome.
+- Keep my learning organized
+- Create revision-friendly notes
+- Track consistency
+- Prepare for interviews and placements
+- Build strong computer science fundamentals
 
 ---
 
-# ⭐ Support
+## 🌱 Growing Repository
 
-If you find this repository helpful:
+This repository is intentionally simple.
 
-⭐ Star the repository
+New topics, projects, notes, and resources will be added as I continue learning.
 
-🍴 Fork the repository
-
-📢 Share it with other learners
+Every commit represents something new learned.
 
 ---
 
-# 📜 License
+## 👨‍💻 Author
 
-This repository is licensed under the MIT License.
+**Dhruv Sengar**
+
+Computer Science Student
+
+GitHub: https://github.com/Dhruv-sengar
 
 ---
 
-## 🚀 Let's Crack Placements Together!
+<div align="center">
+
+### Learn → Practice → Document → Repeat
+
+</div>
