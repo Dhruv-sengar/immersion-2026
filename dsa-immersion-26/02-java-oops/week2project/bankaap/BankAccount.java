@@ -14,31 +14,54 @@ public class BankAccount {
     }
 
     // Getters
-    public String getAccountNumber()     { return accountNumber;     }
-    public String getAccountHolderName() { return accountHolderName; }
-    public String getAccountType()       { return accountType;       }
-    public double getBalance()           { return balance;           }
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
 
     // Deposit money
     public void deposit(double amount) {
         if (amount <= 0) {
-            System.out.println("Invalid deposit amount.");
+            System.out.println("Deposit amount must be greater than zero.");
             return;
         }
         balance += amount;
-        System.out.println("Deposited: Rs " + amount + " | New Balance: Rs " + balance);
+        System.out.println("Deposited Rs " + amount + " to " + accountNumber + ". New balance: Rs " + balance);
     }
 
     // Withdraw money
-    public void withdraw(double amount) {
+    public void withdraw(double amount) throws insufficientBalanceException {
         if (amount <= 0) {
-            System.out.println("Invalid withdrawal amount.");
-        } else if (amount > balance) {
-            System.out.println("Insufficient balance.");
-        } else {
-            balance -= amount;
-            System.out.println("Withdrawn: Rs " + amount + " | Remaining Balance: Rs " + balance);
+            System.out.println("Withdrawal amount must be greater than zero.");
+            return;
         }
+        if (balance < amount) {
+            throw new insufficientBalanceException(amount);
+        }
+        balance -= amount;
+        System.out.println("Withdrawn Rs " + amount + " from " + accountNumber + ". New balance: Rs " + balance);
+    }
+
+    // Transfer amount to another account
+    public void transferAmount(BankAccount receiver, double amount) throws insufficientBalanceException {
+        if (balance < amount) {
+            throw new insufficientBalanceException(amount);
+        }
+        balance -= amount;
+        receiver.balance += amount;
+        System.out.println("Transfer of Rs " + amount + " successful.");
+        System.out.println("Your new balance: Rs " + balance);
     }
 
     // Display account details
@@ -47,21 +70,5 @@ public class BankAccount {
         System.out.println("Account Holder : " + accountHolderName);
         System.out.println("Account Type   : " + accountType);
         System.out.println("Balance        : Rs " + balance);
-    }
-
-    // Transfer money to another account
-    public void transferAmount(BankAccount receiver, double amount) {
-        if (receiver == null) {
-            System.out.println("Receiver account not found.");
-        } else if (amount <= 0) {
-            System.out.println("Transfer amount must be greater than zero.");
-        } else if (amount > balance) {
-            System.out.println("Insufficient balance for transfer.");
-        } else {
-            balance -= amount;
-            receiver.balance += amount;
-            System.out.println("Transfer of Rs " + amount + " successful.");
-            System.out.println("Your new balance: Rs " + balance);
-        }
     }
 }
